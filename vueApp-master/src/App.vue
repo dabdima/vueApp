@@ -1,7 +1,21 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <ul>
+      <li>
+        <router-view><img src="./assets/logo.png"></router-view>
+
+      </li>
+      <li>
+        <router-link to="/admin">admin</router-link>
+
+      </li>
+      <li>
+        <router-link to="/login">login</router-link>
+
+      </li>
+    </ul>
+
+
   </div>
 </template>
 
@@ -11,16 +25,36 @@ export default {
 }
 </script>
 
-<style lang="sass">
-#app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  text-align: center
-  color: #2c3e50
-  margin-top: 60px
-  img
-    width: 50px
-    height: 50px
+<style lang="scss">
+  body {
+    padding:  0px;
+    margin: 0px;
+  }
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      li {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        height: 50px;
+        a {
+          display: block;
+        }
+        }
+      }
 
+  }
 </style>
